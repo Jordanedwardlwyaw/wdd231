@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD 231 • Course Home — Jordan Edward Lwaya</title>
+  <meta name="description" content="Jordan Edward Lwaya — WDD 231 Course Home Page: assignments, certificate courses, and resources." />
+  <meta name="author" content="Jordan Edward Lwaya" />
+
+  <!-- Normalize CSS (allowed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <!-- Defer JS -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/courses.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Site logo" width="48" height="48" />
+      <span class="brand-name">Jordan Edward Lwaya</span>
+    </div>
+
+    <button id="menu" class="menu" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a class="active" href="./">Home</a></li>
+        <li><a href="./chamber/">Chamber</a></li>
+        <li><a href="./final/">Final</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Home</h1>
+
+    <section class="about">
+      <h2>About</h2>
+      <p>Welcome to my WDD 231 course home page. This site houses weekly work, projects, and a live view of courses in my first certificate pathway (Web &amp; Computer Programming).</p>
+      <p>Everything here is built with semantic HTML, custom CSS, and vanilla JavaScript.</p>
+    </section>
+
+    <section class="certificate">
+      <h2>Certificate Courses</h2>
+
+      <div class="controls" role="group" aria-label="Filter courses">
+        <button type="button" class="filter active" data-filter="all">All Courses</button>
+        <button type="button" class="filter" data-filter="wdd">WDD Courses</button>
+        <button type="button" class="filter" data-filter="cse">CSE Courses</button>
+      </div>
+
+      <p class="credits"><strong>Total Credits:</strong> <span id="creditTotal">0</span></p>
+
+      <div id="courseGrid" class="course-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN: HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN: CSS</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN: JavaScript</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://github.com/your-github-username/wdd231" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+    </div>
+
+    <p>&copy; <span id="year"></span> <span id="owner">Jordan Edward Lwaya</span> • <span id="location">Uganda</span></p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

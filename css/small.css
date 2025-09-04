@@ -1,0 +1,106 @@
+/* Base (mobile-first) */
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --ink: #e5e7eb;
+  --muted: #9ca3af;
+  --brand: #38bdf8;
+  --ok: #10b981;
+
+  --radius: 1rem;
+  --space: clamp(12px, 2vw, 20px);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: var(--space);
+  background: rgba(0,0,0,.4);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu {
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.menu .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px 0;
+}
+
+/* Nav */
+.nav { display: none; }
+.nav.open { display: block; }
+.nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  background: var(--panel);
+  border-radius: var(--radius);
+}
+.nav a {
+  display: block;
+  padding: 12px 14px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav a:hover, .nav a:focus { background: rgba(56,189,248,.12); }
+.nav a.active { border-left: 3px solid var(--brand); }
+
+/* Sections */
+main { padding: var(--space); max-width: 1200px; margin: auto; }
+section {
+  margin: var(--space) 0;
+  padding: var(--space);
+  background: rgba(255,255,255,.03);
+  border-radius: var(--radius);
+}
+
+/* Courses */
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter { padding: 6px 12px; border-radius: 999px; border: 1px solid #666; background: transparent; color: var(--ink); cursor: pointer; }
+.filter.active { background: rgba(56,189,248,.12); }
+
+.course-grid { display: grid; gap: 12px; }
+.course {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.1);
+  background: #0b1220;
+}
+.course.completed { background: rgba(16,185,129,.08); border-color: rgba(16,185,129,.6); }
+.course .badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(16,185,129,.5);
+}
+
+/* Footer */
+.site-footer { padding: var(--space); border-top: 1px solid rgba(255,255,255,.1); }
+.social { display: flex; gap: 16px; flex-wrap: wrap; }
