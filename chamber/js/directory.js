@@ -1,14 +1,14 @@
-async function loadMembers() {
+async function loadAllMembers() {
   try {
-    const response = await fetch('data/members.json');
+    const response = await fetch("js/members.json"); // adjust path if needed
     const members = await response.json();
-    displayMembers(members);
+    displayAllMembers(members);
   } catch (error) {
     console.error("Error loading members:", error);
   }
 }
 
-function displayMembers(members) {
+function displayAllMembers(members) {
   const directory = document.getElementById("directory");
   directory.innerHTML = "";
 
@@ -17,18 +17,19 @@ function displayMembers(members) {
     card.classList.add("card");
 
     card.innerHTML = `
-      <img src="${member.image}" alt="${member.name} logo">
+      <img src="${member.logo}" alt="${member.name} logo">
       <h2>${member.name}</h2>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
+      <p>📍 ${member.address}</p>
+      <p>📞 ${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
-      <p><strong>Membership:</strong> ${member.membership}</p>
+      <p class="badge">${member.membership} Member</p>
     `;
+
     directory.appendChild(card);
   });
 }
 
-// Toggle Grid/List Views
+// Grid/List toggle
 document.getElementById("gridBtn").addEventListener("click", () => {
   document.getElementById("directory").className = "grid";
 });
@@ -37,8 +38,8 @@ document.getElementById("listBtn").addEventListener("click", () => {
   document.getElementById("directory").className = "list";
 });
 
-// Footer Info
+// Footer
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-loadMembers();
+loadAllMembers();

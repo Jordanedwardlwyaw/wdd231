@@ -1,7 +1,7 @@
 [
   {
     "name": "ABC Company",
-    "logo": "images/abc.png",
+    "logo": "..images/cafe.png",
     "phone": "555-1234",
     "address": "123 Main St",
     "website": "https://abc.com",
