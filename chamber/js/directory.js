@@ -1,3 +1,6 @@
+// =========================
+// LOAD ALL MEMBERS
+// =========================
 async function loadAllMembers() {
   try {
     const response = await fetch("js/members.json"); // adjust path if needed
@@ -8,6 +11,9 @@ async function loadAllMembers() {
   }
 }
 
+// =========================
+// DISPLAY ALL MEMBERS
+// =========================
 function displayAllMembers(members) {
   const directory = document.getElementById("directory");
   directory.innerHTML = "";
@@ -29,7 +35,9 @@ function displayAllMembers(members) {
   });
 }
 
-// Grid/List toggle
+// =========================
+// TOGGLE GRID / LIST VIEW
+// =========================
 document.getElementById("gridBtn").addEventListener("click", () => {
   document.getElementById("directory").className = "grid";
 });
@@ -38,8 +46,13 @@ document.getElementById("listBtn").addEventListener("click", () => {
   document.getElementById("directory").className = "list";
 });
 
-// Footer
+// =========================
+// FOOTER INFO
+// =========================
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
+// =========================
+// INIT
+// =========================
 loadAllMembers();

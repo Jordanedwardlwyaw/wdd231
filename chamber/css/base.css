@@ -1,31 +1,32 @@
-/* =======================
-   Global Styles
-   ======================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
- .header-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* space between logo and text */
-}
-
-.logo {
-  width: 80px; /* adjust size as needed */
-  height: auto;
-}
-
+/* -------------------------
+   GENERAL BASE STYLES
+------------------------- */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #f4f4f9;
   color: #333;
 }
+/* HEADER LOGO */
+/* HEADER LOGO - MEDIUM SIZE */
+.header-logo {
+  max-width: 150px;    /* medium size */
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;  /* center above the title */
+}
+
+/* Adjust header title spacing */
+header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0 0 0;
+}
+
 
 a {
-  color: #0066cc;
+  color: #0073e6;
   text-decoration: none;
 }
 
@@ -33,256 +34,294 @@ a:hover {
   text-decoration: underline;
 }
 
-/* =======================
-   Header & Navigation
-   ======================= */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------------
+   HEADER & NAV
+------------------------- */
 header {
   background-color: #004080;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 header h1 {
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation links */
+nav {
+  margin-top: 0.5rem;
 }
 
 nav a {
-  margin: 0 1rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #ffcc00;
+  background-color: #005bb5;
 }
 
-/* =======================
-   Hero Section
-   ======================= */
-.hero {
+/* -------------------------
+   HERO SECTION
+------------------------- */
+#hero {
   position: relative;
   text-align: center;
-  color: white;
-  overflow: hidden;
+  margin-bottom: 2rem;
 }
 
-.hero img {
+.hero-image {
   width: 100%;
-  max-height: 450px;
+  max-height: 400px;
   object-fit: cover;
-  display: block;
-  filter: brightness(70%);
-  transition: transform 0.5s ease;
 }
 
-.hero img:hover {
-  transform: scale(1.05);
-}
-
-.hero .cta {
+.cta {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
-.hero .cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-}
-
-.hero .cta .btn {
-  background: linear-gradient(45deg, #ffcc00, #ff9900);
-  color: #004080;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.hero .cta .btn:hover {
-  transform: scale(1.1);
-  background: linear-gradient(45deg, #ffb700, #ff7f00);
-}
-
-/* =======================
-   Events Section
-   ======================= */
-.events {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.event-card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-.event-card h3 {
+.cta h2 {
+  font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #004080;
 }
 
-.event-card p {
-  font-size: 0.9rem;
-}
-
-/* =======================
-   Weather Section
-   ======================= */
-.weather {
-  background: linear-gradient(120deg, #cce0ff, #e6f0ff);
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  margin: 2rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.weather h2 {
-  margin-bottom: 1rem;
-  color: #004080;
-}
-
-#forecast {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.forecast-day {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  min-width: 100px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.forecast-day:hover {
-  transform: translateY(-5px);
-}
-
-/* =======================
-   Spotlights Section
-   ======================= */
-.spotlights {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.spotlight-card {
-  background: linear-gradient(135deg, #ffffff, #f0f8ff);
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-}
-
-.spotlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-.spotlight-card img {
-  max-width: 120px;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-}
-
-.spotlight-card h3 {
-  margin-bottom: 0.5rem;
-  color: #004080;
-}
-
-.spotlight-card p {
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-}
-
-.spotlight-card .badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: gold;
-  color: #004080;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
-  font-weight: bold;
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6600;
+  color: #fff;
   border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* =======================
-   Footer
-   ======================= */
+.cta-button:hover {
+  background-color: #e65c00;
+}
+/* -------------------------
+   JOIN PAGE STYLING
+------------------------- */
+.join-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.join-section h2,
+.join-section h3 {
+  color: #004080;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.join-section p {
+  text-align: center;
+}
+
+.join-section ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.join-form label {
+  margin: 0.5rem 0 0.25rem 0;
+  font-weight: bold;
+}
+
+.join-form input,
+.join-form select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.join-form input:focus,
+.join-form select:focus {
+  outline: none;
+  border-color: #0073e6;
+}
+
+.join-form button {
+  padding: 0.75rem;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.join-form button:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .join-section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* -------------------------
+   DIRECTORY CARDS
+------------------------- */
+#directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Member logo size */
+.card img {
+  max-width: 80px;  /* smaller logo */
+  margin-bottom: 0.5rem;
+}
+
+/* Card text */
+.card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+.card .level {
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Grid/List toggle */
+.grid {
+  display: grid;
+}
+
+.list {
+  display: block;
+}
+
+.list .card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.list .card img {
+  margin-right: 1rem;
+}
+
+/* -------------------------
+   WEATHER SECTION
+------------------------- */
+#weather {
+  background-color: #e6f2ff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#weather h2 {
+  margin-top: 0;
+}
+
+#forecast h3 {
+  margin-bottom: 0.5rem;
+}
+
+#forecast p {
+  margin: 0.25rem 0;
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
 footer {
   background-color: #004080;
   color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
   font-size: 0.9rem;
-  border-top: 4px solid #ffcc00;
 }
 
 footer a {
-  color: #ffcc00;
+  color: #fff;
   text-decoration: underline;
 }
 
-/* =======================
-   Responsive Styles
-   ======================= */
-@media (min-width: 768px) {
-  .spotlights {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #forecast {
-    justify-content: space-between;
-  }
-
-  .hero .cta h2 {
-    font-size: 3rem;
-  }
-
-  .hero .cta .btn {
-    font-size: 1.3rem;
-    padding: 1rem 2rem;
-  }
-
-  .events {
-    justify-content: flex-start;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
+/* -------------------------
+   RESPONSIVE DESIGN
+------------------------- */
+@media (max-width: 600px) {
+  .list .card {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.25rem auto;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
+
+  #directory {
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 0.75rem;
   }
 }
