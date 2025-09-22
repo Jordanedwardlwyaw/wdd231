@@ -10,6 +10,7 @@
   <link rel="icon" href="images/favicon_io.zip" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/join.css"><!-- Page-specific styles -->
 </head>
 <body>
   <!-- HEADER -->
@@ -20,7 +21,7 @@
       <a href="index.html">Home</a>
       <a href="directory.html">Directory</a>
       <a href="discover.html">Discovery</a>
-      <a href="join.html">Join</a>
+      <a href="join.html" class="active">Join</a>
     </nav>
   </header>
 
@@ -28,34 +29,107 @@
   <main>
     <section id="join" class="join-section">
       <h2>Join the Chamber</h2>
-      <p>Become a member of the Kampala Chamber of Commerce and enjoy exclusive benefits:</p>
-      <ul>
-        <li>Networking opportunities</li>
-        <li>Business promotion</li>
-        <li>Access to events and workshops</li>
-      </ul>
+      <p>Become a member of the Kampala Chamber of Commerce and enjoy exclusive benefits.</p>
 
-      <h3>Membership Form</h3>
-      <form action="#" method="post" class="join-form">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      <h3>Membership Application Form</h3>
+      <form action="thankyou.html" method="get" class="join-form">
+        <label>
+          First Name:
+          <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+        </label>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label>
+          Last Name:
+          <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+        </label>
 
-        <label for="company">Company Name:</label>
-        <input type="text" id="company" name="company" placeholder="Enter your company" required>
+        <label>
+          Organizational Title:
+          <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                 pattern="[A-Za-z\\-\\s]{7,}" placeholder="e.g. Marketing Manager">
+        </label>
 
-        <label for="membership">Membership Type:</label>
-        <select id="membership" name="membership">
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="bronze">Bronze</option>
-        </select>
+        <label>
+          Email:
+          <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
 
-        <button type="submit">Submit</button>
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+        </label>
+
+        <label>
+          Business/Organization Name:
+          <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" title="Membership Level" required>
+            <option value="np">NP Membership (Non-Profit)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>
+          Business/Organization Description:
+          <textarea name="description" title="Business Description"></textarea>
+        </label>
+
+        <!-- hidden timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <input type="submit" value="Apply Now">
       </form>
     </section>
+
+    <!-- Membership Level Cards -->
+    <aside class="membership-cards">
+      <div class="card">
+        <h3>NP Membership</h3>
+        <a href="#npModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <a href="#bronzeModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <a href="#silverModal">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <a href="#goldModal">Learn More</a>
+      </div>
+    </aside>
+
+    <!-- Modals -->
+    <dialog id="npModal">
+      <h2>NP Membership</h2>
+      <p>No fee. Perfect for non-profits. Benefits include community events.</p>
+      <button onclick="document.getElementById('npModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal">
+      <h2>Bronze Membership</h2>
+      <p>Entry-level benefits: training access, event invitations.</p>
+      <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="silverModal">
+      <h2>Silver Membership</h2>
+      <p>More benefits: advertising spots, event discounts.</p>
+      <button onclick="document.getElementById('silverModal').close()">Close</button>
+    </dialog>
+
+    <dialog id="goldModal">
+      <h2>Gold Membership</h2>
+      <p>Premium benefits: homepage spotlight, full event discounts, priority promotion.</p>
+      <button onclick="document.getElementById('goldModal').close()">Close</button>
+    </dialog>
   </main>
 
   <!-- FOOTER -->
@@ -69,8 +143,21 @@
   </footer>
 
   <script>
+    // Footer dates
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Add timestamp
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // Open modals
+    document.querySelectorAll(".card a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const modalId = link.getAttribute("href").substring(1);
+        document.getElementById(modalId).showModal();
+      });
+    });
   </script>
 </body>
 </html>
