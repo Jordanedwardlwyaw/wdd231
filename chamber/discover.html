@@ -4,45 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover Our Community</title>
- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:641px)">
 </head>
 <body>
   <header>
-   <header>
-  <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
-  <h1>Kampala Chamber of Commerce</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="directory.html">Directory</a>
-    <a href="discover.html">Discovery</a>
-    <a href="join.html">Join</a>
-  </nav>
-</header>
-
+    <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
+    <h1>Kampala Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discovery</a>
+      <a href="join.html">Join</a>
+    </nav>
   </header>
 
   <main>
     <h1>Discover Our Community</h1>
+
     <section class="history">
       <h2>Our History</h2>
       <p>This city has a rich history of business, culture, and growth.</p>
     </section>
 
-    <section class="photos">
-      <h2>Gallery</h2>
-      <img src="images/town1.jpg" alt="Town view">
-      <img src="images/town2.jpg" alt="Community event">
-      <img src="images/town3.jpg" alt="Local landmark">
-    </section>
+    <section class="visit-message" id="visit-message"></section>
 
-    <section class="stats">
-      <h2>Did You Know?</h2>
-      <ul>
-        <li>Population: 120,000+</li>
-        <li>Founded: 1920</li>
-        <li>Main Industries: Agriculture, Technology, Tourism</li>
-      </ul>
+    <section class="discover-grid" id="cards-container">
+      <!-- Cards will be generated dynamically from JSON -->
     </section>
   </main>
 
@@ -50,6 +39,7 @@
     <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
   </footer>
 
+  <script src="js/discover.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

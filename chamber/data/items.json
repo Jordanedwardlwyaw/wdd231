@@ -1,0 +1,50 @@
+[
+  {
+    "name": "City Museum",
+    "address": "123 Main St, Your City, ST 00000",
+    "description": "A fun and educational museum for all ages.",
+    "image": "images/museum.webp"
+  },
+  {
+    "name": "Central Park",
+    "address": "456 Park Ave, Your City, ST 00000",
+    "description": "A large urban park perfect for walking, jogging, and picnics.",
+    "image": "images/park.webp"
+  },
+  {
+    "name": "Historic Theater",
+    "address": "789 Theater Rd, Your City, ST 00000",
+    "description": "Historic venue offering live performances and films.",
+    "image": "images/theater.webp"
+  },
+  {
+    "name": "City Aquarium",
+    "address": "321 Ocean Blvd, Your City, ST 00000",
+    "description": "Explore aquatic life from around the world.",
+    "image": "images/aquarium.webp"
+  },
+  {
+    "name": "Art Gallery",
+    "address": "654 Art St, Your City, ST 00000",
+    "description": "Showcasing local and international artists.",
+    "image": "images/gallery.webp"
+  },
+  {
+    "name": "Science Center",
+    "address": "987 Science Rd, Your City, ST 00000",
+    "description": "Interactive exhibits for children and adults.",
+    "image": "/images/science.webp"
+  },
+  {
+    "name": "Botanical Garden",
+    "address": "135 Garden Ln, Your City, ST 00000",
+    "description": "Beautiful plants and walking trails.",
+    "image": "images/botanical.webp"
+  },
+  {
+    "name": "Local Brewery",
+    "address": "246 Brew St, Your City, ST 00000",
+    "description": "Sample craft beers and enjoy a local vibe.",
+    "image": "images/brewery.webp"
+  }
+]
