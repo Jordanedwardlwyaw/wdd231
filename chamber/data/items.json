@@ -1,50 +1,50 @@
 [
   {
     "name": "City Museum",
-    "address": "123 Main St, Your City, ST 00000",
+    "address": "123 Main St, Kampala, Uganda",
     "description": "A fun and educational museum for all ages.",
-    "image": "images/museum.webp"
+    "image": "images/museum.png"
   },
   {
     "name": "Central Park",
-    "address": "456 Park Ave, Your City, ST 00000",
-    "description": "A large urban park perfect for walking, jogging, and picnics.",
-    "image": "images/park.webp"
+    "address": "456 Park Ave, Kampala, Uganda",
+    "description": "A large urban park perfect for walking, jogging, and family outings.",
+    "image": "images/central-park.png"
   },
   {
     "name": "Historic Theater",
-    "address": "789 Theater Rd, Your City, ST 00000",
-    "description": "Historic venue offering live performances and films.",
-    "image": "images/theater.webp"
+    "address": "789 Theater Rd, Kampala, Uganda",
+    "description": "Catch plays, musicals, and special performances in this historic venue.",
+    "image": "images/theater.png"
   },
   {
     "name": "City Aquarium",
-    "address": "321 Ocean Blvd, Your City, ST 00000",
-    "description": "Explore aquatic life from around the world.",
-    "image": "images/aquarium.webp"
-  },
-  {
-    "name": "Art Gallery",
-    "address": "654 Art St, Your City, ST 00000",
-    "description": "Showcasing local and international artists.",
-    "image": "images/gallery.webp"
-  },
-  {
-    "name": "Science Center",
-    "address": "987 Science Rd, Your City, ST 00000",
-    "description": "Interactive exhibits for children and adults.",
-    "image": "/images/science.webp"
+    "address": "321 Ocean Blvd, Kampala, Uganda",
+    "description": "Discover marine life exhibits and interactive experiences.",
+    "image": "images/aquarium.png"
   },
   {
     "name": "Botanical Garden",
-    "address": "135 Garden Ln, Your City, ST 00000",
-    "description": "Beautiful plants and walking trails.",
-    "image": "images/botanical.webp"
+    "address": "654 Garden Ln, Kampala, Uganda",
+    "description": "Explore beautifully landscaped gardens and plant collections.",
+    "image": "images/garden.png"
   },
   {
-    "name": "Local Brewery",
-    "address": "246 Brew St, Your City, ST 00000",
-    "description": "Sample craft beers and enjoy a local vibe.",
-    "image": "images/brewery.webp"
+    "name": "River Walk",
+    "address": "987 Riverside Dr, Kampala, Uganda",
+    "description": "Enjoy scenic walking trails along the river.",
+    "image": "images/riverwalk.png"
+  },
+  {
+    "name": "Art Gallery",
+    "address": "135 Art St, Kampala, Uganda",
+    "description": "Local and international art exhibits throughout the year.",
+    "image": "images/art-gallery.png"
+  },
+  {
+    "name": "Science Center",
+    "address": "246 Discovery Ave, Kampala, Uganda",
+    "description": "Interactive science exhibits for kids and adults.",
+    "image": "images/science-center.png"
   }
 ]
