@@ -5,7 +5,7 @@ async function loadGallery() {
     const items = await response.json();
     const gallery = document.querySelector('.gallery');
 
-    items.slice(0,15).forEach(item => {
+    items.slice(0, 15).forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
       card.innerHTML = `
@@ -30,6 +30,8 @@ async function loadGallery() {
 // Modal functionality
 function setupModal(items) {
   const modal = document.getElementById('modal');
+  if (!modal) return; // Prevent errors if modal is missing
+
   const modalImg = document.getElementById('modal-img');
   const modalTitle = document.getElementById('modal-title');
   const modalDesc = document.getElementById('modal-desc');
@@ -50,7 +52,10 @@ function setupModal(items) {
     });
   });
 
-  closeBtn.addEventListener('click', () => modal.style.display = 'none');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => modal.style.display = 'none');
+  }
+
   window.addEventListener('click', e => {
     if (e.target === modal) modal.style.display = 'none';
   });
@@ -59,6 +64,7 @@ function setupModal(items) {
 // LocalStorage Favorites
 function setupFavorites(items) {
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
   document.querySelectorAll('.favorite-btn').forEach(button => {
     const id = parseInt(button.dataset.id);
     if (favorites.includes(id)) button.textContent = '❤️ Saved';
@@ -69,7 +75,7 @@ function setupFavorites(items) {
         button.textContent = '❤️ Saved';
       } else {
         const index = favorites.indexOf(id);
-        favorites.splice(index,1);
+        favorites.splice(index, 1);
         button.textContent = '❤️ Save';
       }
       localStorage.setItem('favorites', JSON.stringify(favorites));
