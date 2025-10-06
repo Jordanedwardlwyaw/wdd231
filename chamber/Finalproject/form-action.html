@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission | GreenScape Landscaping</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Form Submission Received</h1>
+    <p>Thank you for contacting us! Here’s what you submitted:</p>
+    <ul id="submitted-data"></ul>
+    <a href="form.html">Go back to form</a>
+  </main>
+
+  <script>
+    // Get form data from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const list = document.getElementById('submitted-data');
+    params.forEach((value, key) => {
+      const li = document.createElement('li');
+      li.textContent = `${key}: ${value}`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
