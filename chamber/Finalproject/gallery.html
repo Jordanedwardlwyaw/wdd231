@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of plants for landscaping ideas.">
+  <meta name="author" content="Jordan Edward Lwaya">
+  <title>Gallery | Landscaping Gallery</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gallery-page">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/chamber.png" alt="Site Logo">
+      </div>
+      <button class="hamburger" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-title">Plant Gallery</h1>
+    <div class="gallery">
+      <!-- Dynamic cards will be inserted here by JS -->
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="" loading="lazy">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <p><strong>Category:</strong> <span id="modal-category"></span></p>
+      <p><strong>Water:</strong> <span id="modal-water"></span></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jordan Edward Lwaya | <a href="https://youtu.be/your-video-link" target="_blank">Video Demo</a></p>
+  </footer>
+
+  <script src="js/gallery.js" type="module"></script>
+</body>
+</html>

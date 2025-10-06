@@ -1,0 +1,17 @@
+[
+  {"id":1,"title":"Rose","description":"Beautiful flowering shrub","category":"Flower","water":"Medium","image":"images/rose.jpg"},
+  {"id":2,"title":"Lavender","description":"Aromatic herb with purple flowers, attracts pollinators","category":"Herb","water":"Low","image":"images/lavender.jpg"},
+  {"id":3,"title":"Ficus","description":"Indoor tree with glossy leaves, low light tolerant","category":"Tree","water":"Low","image":"images/ficus.jpg"},
+  {"id":4,"title":"Hydrangea","description":"Large clusters of flowers, prefers partial shade","category":"Flower","water":"High","image":"images/hydrangea.jpg"},
+  {"id":5,"title":"Maple","description":"Deciduous tree with vibrant fall foliage","category":"Tree","water":"Medium","image":"images/maple.jpg"},
+  {"id":6,"title":"Bamboo","description":"Fast-growing plant, ideal for privacy screens","category":"Grass","water":"Medium","image":"images/bamboo.jpg"},
+  {"id":7,"title":"Aloe Vera","description":"Succulent plant with medicinal properties, drought-tolerant","category":"Succulent","water":"Low","image":"images/aloe.jpg"},
+  {"id":8,"title":"Tulip","description":"Spring-blooming flower with bright colors","category":"Flower","water":"Medium","image":"images/tulip.jpg"},
+  {"id":9,"title":"Oak","description":"Majestic tree providing shade and strong wood","category":"Tree","water":"Medium","image":"images/oak.jpg"},
+  {"id":10,"title":"Mint","description":"Herb with a refreshing scent, grows quickly","category":"Herb","water":"High","image":"images/mint.jpg"},
+  {"id":11,"title":"Cactus","description":"Desert plant, stores water in thick stems","category":"Succulent","water":"Low","image":"images/cactus.jpg"},
+  {"id":12,"title":"Sunflower","description":"Tall, cheerful flowers that follow the sun","category":"Flower","water":"Medium","image":"images/sunflower.jpg"},
+  {"id":13,"title":"Japanese Maple","description":"Small tree with delicate leaves and vibrant red foliage","category":"Tree","water":"Medium","image":"images/japanese-maple.jpg"},
+  {"id":14,"title":"Basil","description":"Culinary herb used in many dishes, loves sun","category":"Herb","water":"High","image":"images/basil.jpg"},
+  {"id":15,"title":"Orchid","description":"Exotic flowering plant, prefers indirect light","category":"Flower","water":"Medium","image":"images/aloe.jpg"}
+]
