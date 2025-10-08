@@ -1,4 +1,6 @@
-// LocalStorage: Last Visit
+// js/discover.js
+
+// === LocalStorage: Last Visit Message ===
 const visitMsg = document.getElementById("visit-message");
 const lastVisit = localStorage.getItem("lastVisit");
 
@@ -11,24 +13,25 @@ if (lastVisit) {
 } else {
   visitMsg.textContent = "Welcome! This is your first visit to the Discover Page.";
 }
+
 localStorage.setItem("lastVisit", Date.now());
 
-// Load Cards from JSON
+// === Load Cards from JSON ===
 async function loadCards() {
   try {
     const response = await fetch("data/discover.json");
-    if (!response.ok) throw new Error("Could not load JSON");
-
+    if (!response.ok) throw new Error("Failed to load JSON data.");
     const data = await response.json();
+
     const container = document.getElementById("cards-container");
-    container.innerHTML = ""; // Clear previous cards
+    container.innerHTML = ""; // Clear container if any previous content
 
     data.forEach((item, i) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.style.gridArea = `card${i + 1}`;
 
-      // Build card HTML
+      // Use item.image directly since JSON already includes 'images/' path
       card.innerHTML = `
         <img src="${item.image}" alt="${item.name}" loading="lazy">
         <h3>${item.name}</h3>
