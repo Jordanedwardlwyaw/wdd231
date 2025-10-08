@@ -1,46 +1,48 @@
-// Display last visit message
-const lastVisit = localStorage.getItem('lastVisit');
-const now = Date.now();
-let message = "";
+// LocalStorage: Last Visit
+const visitMsg = document.getElementById("visit-message");
+const lastVisit = localStorage.getItem("lastVisit");
 
-if (!lastVisit) {
-  message = "Welcome! Let us know if you have any questions.";
+if (lastVisit) {
+  const prev = new Date(parseInt(lastVisit));
+  const days = Math.floor((Date.now() - prev) / (1000 * 60 * 60 * 24));
+  visitMsg.textContent = days === 0
+    ? "Welcome back! You visited earlier today."
+    : `Welcome back! It's been ${days} day(s) since your last visit.`;
 } else {
-  const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-  if (days < 1) message = "Back so soon! Awesome!";
-  else message = `You last visited ${days} day${days === 1 ? '' : 's'} ago.`;
+  visitMsg.textContent = "Welcome! This is your first visit to the Discover Page.";
+}
+localStorage.setItem("lastVisit", Date.now());
+
+// Load Cards from JSON
+async function loadCards() {
+  try {
+    const response = await fetch("data/discover.json");
+    if (!response.ok) throw new Error("Could not load JSON");
+
+    const data = await response.json();
+    const container = document.getElementById("cards-container");
+    container.innerHTML = ""; // Clear previous cards
+
+    data.forEach((item, i) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.gridArea = `card${i + 1}`;
+
+      // Build card HTML
+      card.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" loading="lazy">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+        <p><strong>Address:</strong> ${item.address}</p>
+        <a href="${item.website || '#'}" target="_blank" class="learn-more">Learn More</a>
+      `;
+
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error loading cards:", error);
+  }
 }
 
-const visitMessageEl = document.getElementById('visit-message');
-visitMessageEl.textContent = message;
-localStorage.setItem('lastVisit', now);
-
-// Load JSON data and generate cards
-const cardsContainer = document.getElementById('cards-container');
-
-fetch('data/items.json')
-  .then(res => res.json())
-  .then(data => {
-    if (!data || data.length === 0) {
-      cardsContainer.textContent = "No items found.";
-      return;
-    }
-    data.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <h2>${item.name}</h2>
-        <figure>
-          <img src="${item.image}" alt="${item.name}">
-        </figure>
-        <address>${item.address}</address>
-        <p>${item.description}</p>
-        <button>Learn More</button>
-      `;
-      cardsContainer.appendChild(card);
-    });
-  })
-  .catch(err => {
-    console.error('Error loading JSON:', err);
-    cardsContainer.textContent = "Error loading items. Check console.";
-  });
+// Initialize
+loadCards();

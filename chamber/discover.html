@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover Our Community</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/Style.css">
-  <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:641px)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Kampala Chamber of Commerce members, history, and local businesses.">
+  <title>Kampala Chamber of Commerce | Discover</title>
 
+  <meta property="og:title" content="Kampala Chamber Discover Page" />
+  <meta property="og:description" content="Explore the businesses and community of Kampala.">
+  <meta property="og:image" content="images/chamber.webp" />
+  <meta property="og:url" content="https://yourusername.github.io/chamber/discover.html" />
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/Style.css" />
 </head>
 <body>
   <header>
-    <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
-    <h1>Kampala Chamber of Commerce</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="directory.html">Directory</a>
-      <a href="discover.html">Discovery</a>
-      <a href="join.html">Join</a>
-    </nav>
+    <div class="header-container">
+      <img src="Images/chamber.webp" alt="Kampala Chamber Logo" class="logo" loading="lazy">
+      <button id="menu" aria-label="menu">&#9776;</button>
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="discover.html" class="active">Discover</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <h1>Discover Our Community</h1>
+    <section id="visit-message" class="visit-message"></section>
 
     <section class="history">
       <h2>Our History</h2>
-      <p>This city has a rich history of business, culture, and growth.</p>
+      <p>Kampala has been a thriving center for innovation, trade, and culture for decades. The Chamber unites businesses to promote growth and connection throughout the region.</p>
     </section>
 
-    <section class="visit-message" id="visit-message"></section>
-
-    <section class="discover-grid" id="cards-container">
-      <!-- Cards will be generated dynamically from JSON -->
-    </section>
+    <section id="cards-container" class="discover-grid"></section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+    <p>© <span id="year"></span> Kampala Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="js/discover.js"></script>
+  <script src="js/discover.js" defer></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+    document.getElementById("menu").addEventListener("click", () => {
+      document.getElementById("nav-menu").classList.toggle("open");
+    });
   </script>
 </body>
 </html>

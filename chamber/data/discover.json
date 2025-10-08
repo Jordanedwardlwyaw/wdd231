@@ -3,48 +3,48 @@
     "name": "City Museum",
     "address": "123 Main St, Kampala, Uganda",
     "description": "A fun and educational museum for all ages.",
-    "image": "images/museum.png"
+    "image": "Images/museum.webp"
   },
   {
     "name": "Central Park",
     "address": "456 Park Ave, Kampala, Uganda",
     "description": "A large urban park perfect for walking, jogging, and family outings.",
-    "image": "images/central-park.png"
+    "image": "Images/central-park.webp"
   },
   {
     "name": "Historic Theater",
     "address": "789 Theater Rd, Kampala, Uganda",
     "description": "Catch plays, musicals, and special performances in this historic venue.",
-    "image": "images/theater.png"
+    "image": "Images/theater.webp"
   },
   {
     "name": "City Aquarium",
     "address": "321 Ocean Blvd, Kampala, Uganda",
     "description": "Discover marine life exhibits and interactive experiences.",
-    "image": "images/aquarium.png"
+    "image": "Images/aquarium.webp"
   },
   {
     "name": "Botanical Garden",
     "address": "654 Garden Ln, Kampala, Uganda",
     "description": "Explore beautifully landscaped gardens and plant collections.",
-    "image": "images/garden.png"
+    "image": "Images/garden.webp"
   },
   {
     "name": "River Walk",
     "address": "987 Riverside Dr, Kampala, Uganda",
     "description": "Enjoy scenic walking trails along the river.",
-    "image": "images/riverwalk.png"
+    "image": "Images/riverwalk.webp"
   },
   {
     "name": "Art Gallery",
     "address": "135 Art St, Kampala, Uganda",
     "description": "Local and international art exhibits throughout the year.",
-    "image": "images/art-gallery.png"
+    "image": "Images/art-gallery.webp"
   },
   {
     "name": "Science Center",
     "address": "246 Discovery Ave, Kampala, Uganda",
     "description": "Interactive science exhibits for kids and adults.",
-    "image": "images/science-center.png"
+    "image": "Images/science-center.webp"
   }
 ]

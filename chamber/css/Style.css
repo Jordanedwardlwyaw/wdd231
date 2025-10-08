@@ -1,76 +1,113 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #222;
 }
 
-header, footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1E90FF;
+header {
+  background-color: #005baa;
   color: white;
+  padding: 1rem;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav.open {
   display: flex;
-  justify-content: center;
-  gap: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: 600;
 }
 
-.grid-container {
+nav a.active {
+  text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Grid layout for discover page */
+.discover-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .discover-grid {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+  .card:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   text-align: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
 }
 
 .card img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Hover effects for medium and large screens */
-@media (min-width: 641px) {
-  .card img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-    transition: all 0.3s ease;
-  }
+.learn-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #005baa;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
-/* Medium screens */
-@media (min-width: 641px) and (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Large screens */
-@media (min-width: 1025px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.visit-message {
-  text-align: center;
-  margin: 10px 0;
-  font-weight: bold;
+.learn-more:hover {
+  background-color: #004080;
 }
