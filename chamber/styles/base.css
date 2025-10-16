@@ -12,7 +12,7 @@ body {
 /* HEADER LOGO */
 /* HEADER LOGO - MEDIUM SIZE */
 .header-logo {
-  max-width: 150px;    /* medium size */
+  max-width: 100px;    /* medium size */
   height: auto;
   display: block;
   margin: 0 auto 0.5rem auto;  /* center above the title */
