@@ -1,26 +1,58 @@
 [
   {
     "name": "ABC Company",
-    "logo": "images/abc.png",
+    "image": "images/abc.png",
     "phone": "555-1234",
-    "address": "123 Main St",
+    "address": "123 Main St, Kampala, Uganda",
     "website": "https://abc.com",
     "membership": "Gold"
   },
   {
     "name": "XYZ Industries",
-    "logo": "images/xyz.png",
+    "image": "images/xyz.png",
     "phone": "555-5678",
-    "address": "456 Market St",
+    "address": "456 Market St, Kampala, Uganda",
     "website": "https://xyz.com",
     "membership": "Silver"
   },
   {
     "name": "Local Cafe",
-    "logo": "images/cafe.png",
+    "image": "images/cafe.png",
     "phone": "555-2468",
-    "address": "789 Broadway",
+    "address": "789 Broadway, Kampala, Uganda",
     "website": "https://cafe.com",
     "membership": "Bronze"
+  },
+  {
+    "name": "Sunrise Electronics",
+    "image": "images/electronics.png",
+    "phone": "555-3344",
+    "address": "21 Industrial Rd, Kampala, Uganda",
+    "website": "https://sunrise-electronics.com",
+    "membership": "Silver"
+  },
+  {
+    "name": "GreenScape Landscaping",
+    "image": "images/landscaping.png",
+    "phone": "555-9988",
+    "address": "12 Garden Ln, Kampala, Uganda",
+    "website": "https://greenscape.com",
+    "membership": "Gold"
+  },
+  {
+    "name": "Bright Future Tutors",
+    "image": "images/tutors.png",
+    "phone": "555-3456",
+    "address": "98 School Ave, Kampala, Uganda",
+    "website": "https://brightfuture.com",
+    "membership": "Bronze"
+  },
+  {
+    "name": "PearlTech Solutions",
+    "image": "images/pearltech.png",
+    "phone": "555-7890",
+    "address": "77 IT Park, Kampala, Uganda",
+    "website": "https://pearltech.com",
+    "membership": "Gold"
   }
 ]

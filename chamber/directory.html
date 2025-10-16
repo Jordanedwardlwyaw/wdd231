@@ -3,57 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Business directory for the [Your City] Chamber of Commerce">
+  <meta name="description" content="Business directory for the Kampala Chamber of Commerce.">
   <meta name="author" content="Jordan Edward">
-  <title>kampala Chamber of Commerce | Directory</title>
+  <title>Kampala Chamber of Commerce | Directory</title>
 
- 
-<link rel="icon" href="images/favicon_io.zip" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-
-  <meta property="og:title" content="kampala Chamber of Commerce Directory">
-  <meta property="og:description" content="Explore businesses and organizations in the [Your City] Chamber of Commerce.">
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Kampala Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore businesses and organizations in the Kampala Chamber of Commerce.">
   <meta property="og:image" content="images/chamber-preview.png">
   <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
 
- <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/base.css">
-  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-  
   <header>
-  <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
-  <h1>Kampala Chamber of Commerce</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="directory.html">Directory</a>
-    <a href="discover.html">Discovery</a>
-    <a href="join.html">Join</a>
-  </nav>
-</header>
-
-    <h1>kampala Chamber of Commerce</h1>
-    <nav>
-      <button id="gridBtn">Grid View</button>
-      <button id="listBtn">List View</button>
+    <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
+    <h1>Kampala Chamber of Commerce</h1>
+    <button id="menuBtn" aria-label="Toggle Menu">☰</button>
+    <nav id="mainNav" class="hide">
+      <a href="index.html">Home</a>
+      <a href="directory.html" class="active">Directory</a>
+      <a href="discover.html">Discover</a>
+      <a href="join.html">Join</a>
     </nav>
   </header>
 
   <main>
+    <section class="view-toggle">
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </section>
+
     <section id="directory" class="grid"></section>
   </main>
 
   <footer>
-  <p> kampala Chamber of Commerce<br>
-     101 Business Avenue,   Wakiso District<br>
-     kampala, kawempe 12345
-  </p>
-  <p>☎️ (555) 987-6543 | ✉️ info@yourcitychamber.org</p>
-  <p>© <span id="year"></span> | WDD 231 | Last Modified: <span id="lastModified"></span></p>
-</footer>
+    <p>Kampala Chamber of Commerce<br>
+      101 Business Avenue, Wakiso District<br>
+      Kampala, Kawempe 12345
+    </p>
+    <p>☎️ (555) 987-6543 | ✉️ infokampalachamber.org</p>
+    <p>© <span id="year"></span> | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+  </footer>
 
-
-  <script src="js/directory.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </body>
 </html>
