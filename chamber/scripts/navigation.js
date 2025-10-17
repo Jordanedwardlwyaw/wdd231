@@ -1,9 +1,8 @@
-// Responsive navigation
-const menuBtn = document.getElementById('menu');
-const nav = document.getElementById('primary-nav');
-
-menuBtn?.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  const expanded = nav.classList.contains('open');
-  menuBtn.setAttribute('aria-expanded', expanded);
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = location.pathname.split("/").pop();
+  document.querySelectorAll("nav a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
 });

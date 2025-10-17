@@ -1,5 +1,4 @@
-// Footer copyright year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Last modified
-document.getElementById('lastModified').textContent = document.lastModified;
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = `Last modified: ${document.lastModified}`;
+});

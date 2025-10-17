@@ -1,5 +1,10 @@
+/* GLOBAL RESET & BASE */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #F0F8FF;
   color: #333;
   margin: 0;
@@ -7,72 +12,145 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
-header {
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HEADER */
+.site-header {
   background-color: #1E90FF;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
 }
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-}
-header .subtitle {
-  font-size: 1.2rem;
-  font-style: italic;
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Sections */
+.brand-name {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+/* NAVIGATION */
+.nav ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  background-color: #007BFF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #0056b3;
+}
+
+/* MAIN CONTENT */
 main {
   padding: 1rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
+
+h1 {
+  text-align: center;
+  color: #1E90FF;
+}
+
 h2 {
-  font-family: 'Montserrat', sans-serif;
   color: #1E90FF;
   border-bottom: 2px solid #FFD700;
   padding-bottom: 0.3rem;
 }
-ul {
-  list-style: disc inside;
-}
 
-/* Accent Colors */
-.accent, .primary {
-  color: #1E90FF;
-  font-weight: bold;
-}
-.secondary {
-  color: #FFD700;
-  font-weight: bold;
-}
-.background {
-  background-color: #F0F8FF;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid #ccc;
-}
-
-/* Wireframes */
-.wireframe {
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   margin: 1rem 0;
-  text-align: center;
 }
-.wireframe img {
-  max-width: 300px;
+
+.filter {
+  border: 2px solid #1E90FF;
+  background: white;
+  color: #1E90FF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter.active,
+.filter:hover {
+  background-color: #1E90FF;
+  color: white;
+}
+
+.course-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.course-card {
+  background-color: white;
   border: 2px solid #1E90FF;
   border-radius: 8px;
-}
-.caption {
-  font-size: 0.9rem;
-  font-style: italic;
-  margin-top: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Footer */
-footer {
+.course-card:hover {
+  transform: scale(1.03);
+}
+
+.course-card.completed {
+  background-color: #e6ffe6;
+  border-color: #32CD32;
+}
+
+.credits {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.site-footer {
   background-color: #1E90FF;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.site-footer .social a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer .social a:hover {
+  text-decoration: underline;
 }
