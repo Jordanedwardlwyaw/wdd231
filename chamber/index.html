@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kampala Chamber of Commerce Home Page">
-  <meta name="author" content="Jordan Edward">
-  <title>Kampala Chamber of Commerce | Directory</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD 231 • Course Home — Jordan Edward Lwaya</title>
+  <meta name="description" content="Jordan Edward Lwaya — WDD 231 Course Home Page: assignments, certificate courses, and resources." />
+  <meta name="author" content="Jordan Edward Lwaya" />
 
-  <link rel="icon" href="images/favicon_io.zip" type="image/x-icon">
+  <!-- Normalize CSS (allowed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
 
-  <meta property="og:title" content="Kampala Chamber of Commerce Directory">
-  <meta property="og:description" content="Explore businesses and organizations in the Kampala Chamber of Commerce.">
-  <meta property="og:image" content="images/chamber-preview.png">
-  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/index.html">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-   <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/base.css" />
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <!-- Defer JS -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/courses.js" defer></script>
 </head>
 <body>
-  <!-- HEADER -->
-  
-  <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
-  <h1>Kampala Chamber of Commerce</h1>
-  <nav>
-    
-  </nav>
-</header>
- <a href="index.html" class="active">Home</a>
-<a href="directory.html">Directory</a>
-<a href="discover.html">Discover</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="join.html">Join</a>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Site logo" width="48" height="48" />
+      <span class="brand-name">Jordan Edward Lwaya</span>
+    </div>
 
-    <h1>Kampala Chamber of Commerce</h1>
-    <nav>
-      <button id="gridBtn">Grid View</button>
-      <button id="listBtn">List View</button>
+    <button id="menu" class="menu" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul>
+        <li><a class="active" href="./">Home</a></li>
+        <li><a href="./chamber/">Chamber</a></li>
+        <li><a href="./final/">Final</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <img src="images/kampala.webp" alt="Kampala City Skyline" class="hero-image">
-    <div class="cta">
-      <h2>Join the Chamber Today!</h2>
-      <a href="join.html" class="cta-button">Become a Member</a>
-    </div>
-  </section>
+  <main id="main-content">
+    <h1>Home</h1>
 
-  <!-- MEMBERS DIRECTORY -->
-  <main>
-    <section id="directory" class="grid"></section>
+    <section class="about">
+      <h2>About</h2>
+      <p>Welcome to my WDD 231 course home page. This site houses weekly work, projects, and a live view of courses in my first certificate pathway (Web &amp; Computer Programming).</p>
+      <p>Everything here is built with semantic HTML, custom CSS, and vanilla JavaScript.</p>
+    </section>
+
+    <section class="certificate">
+      <h2>Certificate Courses</h2>
+
+      <div class="controls" role="group" aria-label="Filter courses">
+        <button type="button" class="filter active" data-filter="all">All Courses</button>
+        <button type="button" class="filter" data-filter="wdd">WDD Courses</button>
+        <button type="button" class="filter" data-filter="cse">CSE Courses</button>
+      </div>
+
+      <p class="credits"><strong>Total Credits:</strong> <span id="creditTotal">0</span></p>
+
+      <div id="courseGrid" class="course-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN: HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN: CSS</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN: JavaScript</a></li>
+      </ul>
+    </section>
   </main>
 
-  <!-- WEATHER SECTION -->
-  <section id="weather">
-    <h2>Current Weather in Kampala</h2>
-    <div id="weather-info">Weather loading...</div>
-    <div id="forecast"></div>
-  </section>
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://github.com/your-github-username/wdd231" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+    </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Kampala Chamber of Commerce<br>
-       101 Business Avenue, Wakiso District<br>
-       Kampala, Kawempe 12345
-    </p>
-    <p>☎️ (555) 987-6543 | ✉️ info@kampalachamber.org</p>
-    <p>© <span id="year"></span> | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> <span id="owner">Jordan Edward Lwaya</span> • <span id="location">Uganda</span></p>
+    <p id="lastModified"></p>
   </footer>
-
-  <!-- JS -->
-  <script src="scripts/directory.js" defer></script>
 </body>
 </html>

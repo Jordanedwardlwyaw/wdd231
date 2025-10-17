@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kampala Chamber of Commerce Home Page">
+  <meta name="author" content="Jordan Edward">
+  <title>Kampala Chamber of Commerce | Directory</title>
+
+  <link rel="icon" href="images/favicon_io.zip" type="image/x-icon">
+
+  <meta property="og:title" content="Kampala Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore businesses and organizations in the Kampala Chamber of Commerce.">
+  <meta property="og:image" content="images/chamber-preview.png">
+  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/index.html">
+
+  <!-- CSS -->
+   <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  
+  <img src="images/chamber.png" alt="Kampala Chamber of Commerce Logo" class="header-logo">
+  <h1>Kampala Chamber of Commerce</h1>
+  <nav>
+    
+  </nav>
+</header>
+ <a href="index.html" class="active">Home</a>
+<a href="directory.html">Directory</a>
+<a href="discover.html">Discover</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="join.html">Join</a>
+
+    <h1>Kampala Chamber of Commerce</h1>
+    <nav>
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <img src="images/kampala.webp" alt="Kampala City Skyline" class="hero-image">
+    <div class="cta">
+      <h2>Join the Chamber Today!</h2>
+      <a href="join.html" class="cta-button">Become a Member</a>
+    </div>
+  </section>
+
+  <!-- MEMBERS DIRECTORY -->
+  <main>
+    <section id="directory" class="grid"></section>
+  </main>
+
+  <!-- WEATHER SECTION -->
+  <section id="weather">
+    <h2>Current Weather in Kampala</h2>
+    <div id="weather-info">Weather loading...</div>
+    <div id="forecast"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Kampala Chamber of Commerce<br>
+       101 Business Avenue, Wakiso District<br>
+       Kampala, Kawempe 12345
+    </p>
+    <p>☎️ (555) 987-6543 | ✉️ info@kampalachamber.org</p>
+    <p>© <span id="year"></span> | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="scripts/directory.js" defer></script>
+</body>
+</html>
